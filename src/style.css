@@ -1,0 +1,16 @@
+.grayscale {
+	filter: saturate(0);
+}
+
+.sepia {
+	filter: sepia();
+}
+
+.indication-bar {
+	width: 100vw;
+	text-align: center;
+	background-color: rgb(137, 213, 216);
+	color: #fff;
+	font-size: 15px;
+	padding: 0.5rem;
+}
