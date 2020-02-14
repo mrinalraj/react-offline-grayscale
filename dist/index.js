@@ -95,11 +95,11 @@ function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "disableClick", function () {
-      if (_this.props.disableClick) document.addEventListener('click', _this.handler, true);
+      if (!_this.props.enableClick) document.addEventListener('click', _this.handler, true);
     });
 
     _defineProperty(_assertThisInitialized(_this), "enableClick", function () {
-      if (_this.props.disableClick) document.removeEventListener('click', _this.handler, true);
+      if (!_this.props.enableClick) document.removeEventListener('click', _this.handler, true);
     });
 
     _defineProperty(_assertThisInitialized(_this), "handler", function (e) {
@@ -131,11 +131,12 @@ function (_Component) {
           barStyle = _this$props.barStyle,
           customPageStyle = _this$props.customPageStyle,
           _this$props$filter = _this$props.filter,
-          filter = _this$props$filter === void 0 ? 'grayscale' : _this$props$filter;
+          filter = _this$props$filter === void 0 ? 'grayscale' : _this$props$filter,
+          customOfflineText = _this$props.customOfflineText;
       return _react.default.createElement(_react.default.Fragment, null, isDisconnected && _react.default.createElement("div", {
         className: "indication-bar",
         style: barStyle
-      }, "You are offline"), _react.default.createElement("div", {
+      }, customOfflineText || "You are offline"), _react.default.createElement("div", {
         className: isDisconnected && filter,
         style: customPageStyle
       }, _react.Children.only(this.props.children)));
@@ -148,8 +149,9 @@ function (_Component) {
 exports.default = ReactOffline;
 
 _defineProperty(ReactOffline, "propTypes", {
-  disableClick: _propTypes.default.bool,
+  enableClick: _propTypes.default.bool,
   filter: _propTypes.default.oneOf(fliterOptions),
   barStyle: _propTypes.default.object,
-  customPageStyle: _propTypes.default.object
+  customPageStyle: _propTypes.default.object,
+  customOfflineText: _propTypes.default.string
 });

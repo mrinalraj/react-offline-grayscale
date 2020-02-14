@@ -1,6 +1,8 @@
 # react-offline-grayscale
 
-[![NPM](https://img.shields.io/npm/v/react-mqtt-client.svg)](https://www.npmjs.com/package/react-mqtt-client) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+Make your react app respond when offline.
+
+[![NPM](https://img.shields.io/npm/v/react-offline-grayscale.svg)](https://www.npmjs.com/package/react-offline-grayscale) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
